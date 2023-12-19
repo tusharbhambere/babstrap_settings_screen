@@ -7,7 +7,7 @@ class SmallUserCard extends StatelessWidget {
   final VoidCallback? onTap;
   final String? userName;
   final Widget? userMoreInfo;
-  final ImageProvider userProfilePic;
+  final Widget userProfilePic;
 
   SmallUserCard({
     required this.cardColor,
@@ -62,7 +62,7 @@ class SmallUserCard extends StatelessWidget {
                       Expanded(
                         child: CircleAvatar(
                           radius: mediaQueryHeight / 18,
-                          backgroundImage: userProfilePic,
+                          child: userProfilePic,
                         ),
                       ),
                       Expanded(
