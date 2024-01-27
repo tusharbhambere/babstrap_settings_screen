@@ -6,9 +6,9 @@ class BigUserCard extends StatelessWidget {
   final double? cardRadius;
   final Color? backgroundMotifColor;
   final Widget? cardActionWidget;
-  final String? userName;
+  final Widget userName;
   final Widget? userMoreInfo;
-  final ImageProvider userProfilePic;
+  final Widget userProfilePic;
 
   BigUserCard({
     this.backgroundColor,
@@ -57,29 +57,16 @@ class BigUserCard extends StatelessWidget {
                   : MainAxisAlignment.center,
               children: [
                 Row(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     // User profile
+                    Expanded(flex: 1, child: userProfilePic),
                     Expanded(
-                      child: CircleAvatar(
-                        radius: mediaQueryHeight / 18,
-                        backgroundImage: userProfilePic,
-                      ),
-                    ),
-                    Expanded(
+                      flex: 2,
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Text(
-                            userName!,
-                            style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              fontSize: mediaQueryHeight / 30,
-                              color: Colors.white,
-                            ),
-                          ),
+                          userName,
                           if (userMoreInfo != null) ...[
                             userMoreInfo!,
                           ],
