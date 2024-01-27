@@ -26,12 +26,13 @@ apply plugin: 'kotlin-android'
 
 android {
     compileSdkVersion 33
+    applicationId "com.babacar.babstrap_settings_screen"
+
 
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
     }
     defaultConfig {
-       applicationId "com.babacar.babstrap_settings_screen"
         minSdkVersion 16
     }
 }
