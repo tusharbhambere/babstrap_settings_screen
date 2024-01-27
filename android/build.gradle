@@ -2,15 +2,15 @@ group 'com.babacar.babstrap_settings_screen'
 version '1.0-SNAPSHOT'
 
 buildscript {
-    ext.kotlin_version = '1.9.10'
+    ext.kotlin_version = '1.8.0'
     repositories {
         google()
         jcenter()
     }
 
     dependencies {
- classpath 'com.android.tools.build:gradle:8.1.2'
- classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath 'com.android.tools.build:gradle:4.1.0'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
 }
 
@@ -25,7 +25,7 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
 android {
-    compileSdkVersion 33
+    compileSdkVersion 30
     namespace "com.babacar.babstrap_settings_screen"
 
 
