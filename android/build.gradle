@@ -26,7 +26,7 @@ apply plugin: 'kotlin-android'
 
 android {
     compileSdkVersion 33
-    applicationId "com.babacar.babstrap_settings_screen"
+    namespace "com.babacar.babstrap_settings_screen"
 
 
     sourceSets {
